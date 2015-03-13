@@ -1,0 +1,11 @@
+#SDcard01_rw.script
+
+cd /media
+
+if [ -f mmcblk0p1/MPTool/sdcard/sdMPTool ]; then
+	mmcblk0p1/MPTool/sdcard/sdMPTool 1 mmcblk0p1
+	cd 
+else
+	cd 
+	echo "FAIL"
+fi

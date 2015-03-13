@@ -1,0 +1,37 @@
+#Network01_APmode.script
+killall sonix-proj
+killall twowayaudio
+killall boa
+killall apsta
+killall cstreamer
+killall tstreamer
+killall record
+killall snx_ez
+
+#SLEEP# sleep one seconds
+
+script_dir=/media/mmcblk0p1/MPTool/Network/wifiAP
+
+if [ -f $script_dir/APmode.sh ]; then
+	$script_dir/APmode.sh
+	sleep 1
+	IPADDR=`/sbin/ifconfig wlan0 |sed -n '/inet addr/s/^[^:]*:\([0-9.]\{7,15\}\) .*/\1/p'`
+	if [ "$IPADDR" != "" ] && [ -f /tmp/SSID.txt ]; then
+
+	SSID=`cat /tmp/SSID.txt`
+	SSID_pass=`cat /tmp/SSID_pass.txt`
+	echo "APMODE IP $IPADDR SSID $SSID password $SSID_pass"
+	echo "PASS"
+	
+	else
+
+	echo "FAIL"
+
+	fi
+else
+	echo "FAIL"
+fi
+
+
+
+

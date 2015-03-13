@@ -1,0 +1,4 @@
+#Video02_VLC.script
+#TIMEOUT# 99999
+IPADDR=`/sbin/ifconfig wlan0 |sed -n '/inet addr/s/^[^:]*:\([0-9.]\{7,15\}\) .*/\1/p'`
+echo "*VLC rtsp://$IPADDR/media/stream1"

@@ -1,0 +1,24 @@
+#Video03_Focus_Tuning_JTAG.script
+#TIMEOUT# 99999
+killall sonix-proj
+killall twowayaudio
+killall boa
+killall apsta
+killall cstreamer
+killall tstreamer
+killall record
+killall snx_ez
+
+#SLEEP# sleep one seconds
+#SLEEP# sleep one seconds
+
+script_dir=/media/mmcblk0p1/MPTool/Video
+
+if [ -f $script_dir/snx_autorun.sh ]; then
+	$script_dir/snx_autorun.sh
+	echo "*SonixIPCamVerifier c:/sonix/SonixIPCamVerifier/IPCamVerifier.exe"
+
+else
+	echo "FAIL"
+fi
+

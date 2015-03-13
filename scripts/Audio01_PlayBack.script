@@ -1,0 +1,33 @@
+#Audio01_PlayBack.script
+killall sonix-proj
+killall twowayaudio
+killall boa
+killall apsta
+killall cstreamer
+killall tstreamer
+killall record
+killall snx_ez
+
+script_dir=/media/mmcblk0p1/MPTool/Audio
+
+
+#SLEEP# sleep one seconds
+#SLEEP# sleep one seconds
+#SLEEP# sleep one seconds
+
+#sh /media/mmcblk0p1/MPTool/Audio/AudioPlay.sh
+
+echo "[PLAY]" > /dev/console
+
+gpio_ms1 -n 7 -m 1 -v 1
+$script_dir/snx_audio_vol_ctl -d spk -v 19
+
+#PAUSE# Start to play!!
+
+$script_dir/aplay -D hw:0,0 -r 8000 -f S16_LE -d 3 -t raw $script_dir/S16_8K_3s.pcm &
+sleep 1
+$script_dir/snx_audio_vol_ctl -d spk -v 19
+sleep 2
+gpio_ms1 -n 7 -m 1 -v 0
+echo "ASK_RESULT"
+

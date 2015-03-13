@@ -1,0 +1,22 @@
+#Video01_RTSP.script
+killall sonix-proj
+killall twowayaudio
+killall boa
+killall apsta
+killall cstreamer
+killall tstreamer
+killall record
+killall snx_ez
+
+#SLEEP# sleep one seconds
+#SLEEP# sleep one seconds
+
+script_dir=/media/mmcblk0p1/MPTool/Video/legacy
+
+if [ -f $script_dir/snx_h264.sh ]; then
+	$script_dir/snx_h264.sh
+	echo "PASS"
+else
+	echo "FAIL"
+fi
+

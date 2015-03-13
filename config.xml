@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mptool>
+    <config id="00001">
+        <Title>Audio PlayBack</Title>
+        <ScriptPath>scripts/Audio01_PlayBack.script</ScriptPath>
+    </config>
+    <config id="00002">
+        <Title>Audio RecordPlay</Title>
+        <ScriptPath>scripts/Audio02_RecordPlay.script</ScriptPath>
+    </config>
+    <config id="00003">
+        <Title>SD_Card RW Test</Title>
+        <ScriptPath>scripts/SDcard01_rw.script</ScriptPath>
+    </config>
+    <config id="00004">
+        <Title>GPIO TEST</Title>
+        <ScriptPath>scripts/GPIO01.script</ScriptPath>
+    </config>
+    <config id="00005">
+        <Title>NETWORK AP MODE setup</Title>
+        <ScriptPath>scripts/Network01_APmode.script</ScriptPath>
+    </config>
+    <config id="00006">
+        <Title>VIDEO RTSP Streaming setup</Title>
+        <ScriptPath>scripts/Video01_RTSP.script</ScriptPath>
+    </config>
+    <config id="00007">
+        <Title>VIDEO VLC</Title>
+        <ScriptPath>scripts/Video02_VLC.script</ScriptPath>
+    </config>
+    <config id="00008">
+        <Title>VIDEO Focus Tuning JTAG</Title>
+        <ScriptPath>scripts/Video03_Focus_Tuning_JTAG.script</ScriptPath>
+    </config>
+    
+</mptool>
